@@ -5,7 +5,6 @@ Each ESP32 is programmed to detect Wi-Fi network quality by scanning all availab
 
 To calculate **Wi-Fi coverage area (signal coverage)**, an additional function is implemented in the ESP32 firmware based on the formula described in the *Theory* section of the report.
 
----
 
 ## Database Configuration
 
@@ -18,7 +17,6 @@ id, device_id, location, strength, distance, channel, channelLoad, interference,
 
 These fields store structured Wi-Fi signal data sent by each ESP32.
 
----
 
 ## Data Transmission Workflow
 
@@ -35,7 +33,6 @@ Data transmission from ESP32 to MySQL is handled using a **PHP backend** (`submi
    eines1, zwei2, drei3, vier4, funf5
    ```
 
----
 
 ## Web Interface and Visualization
 
@@ -58,7 +55,6 @@ The heatmap generation system uses two Python scripts:
 * `heatmap_generator.py` – retrieves Wi-Fi data from MySQL and processes it into a heatmap
 * `app.py` – executes and serves the generated heatmap to the web interface
 
----
 
 ### Summary of System Flow
 
@@ -69,5 +65,3 @@ Frontend (index.php / home.php) → PHP (data.php) → Chart.js visualization
 ↓
 Python Flask (app.py + heatmap_generator.py) → Heatmap generation
 ```
-
-Would you like me to format it further with Markdown styling (like bullet icons, code blocks, or folder structure examples) so it looks visually neat in a GitHub README?
