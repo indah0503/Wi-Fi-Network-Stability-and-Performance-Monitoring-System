@@ -46,7 +46,7 @@ This page is built with **HTML, CSS, and JavaScript**, and provides:
 The visualization system consists of:
 
 * **`data.php`** – acts as an API endpoint to fetch data from MySQL
-* **`home.php`** – integrates the PHP data endpoint and renders the user interface
+* **`index.php`** – integrates the PHP data endpoint and renders the user interface
 * **Chart.js** – used to display line charts of signal strength
 * **Flask (Python)** – used to generate heatmaps from MySQL data
 
