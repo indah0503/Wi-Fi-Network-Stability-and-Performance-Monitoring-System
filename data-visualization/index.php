@@ -21,7 +21,7 @@
 
     <main>
         <!-- ===== HOME =====-->
-        <div class="home" style="background: url('http://10.33.102.185/assets/img/bg1.jpg') no-repeat center; background-size: cover; height: 100vh;">
+        <div class="home" style="background: url('http://IP_Address/assets/img/bg1.jpg') no-repeat center; background-size: cover; height: 100vh;">
             <div class="home__left">
                 <h1 class="home__title">Inter-TA</h1>
                 <span class="home__subtitle">Web Monitor Kekuatan Internet</span>
@@ -173,8 +173,6 @@
                 <div class="footer-section">
                     <h3>About Me</h3>
                     <p>Hai! Saya Indah Sekar...</p>
-                    <p>Mahasiswa tahun terakhir di jurusan Teknologi Rekayasa Internet Sekolah Vokasi Universitas Gadjah Mada yang sedang menjalankan Tugas Akhir</p>
-                    <p>Inilah Tugas Akhir saya.</p>
                 </div>
 
                 <div class="quick-links">
@@ -182,14 +180,13 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Discover</a></li>
-                        <li><a href="https://internet.ugm.ac.id">Hotspot</a></li>
                         <li><a href="https://www.linkedin.com/in/indah-sekar-ningrum/">Contact</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Proyek Akhir D4 Teknologi Rekayasa Internet UGM. All rights reserved.</p>
+                <p>&copy;All rights reserved.</p>
             </div>
         </footer>
     </main>
@@ -198,4 +195,5 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/main_2.js"></script>
 </body>
+
 </html>
