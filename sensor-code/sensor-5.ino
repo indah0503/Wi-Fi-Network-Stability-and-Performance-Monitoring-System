@@ -7,7 +7,7 @@ const char* password = "";
 
 const char* serverName = "http://Your-IP-Address/submit.php";
 
-String apiKeyValue = "ongjHzqKdrtiqpr2ythkTOoxgp4eNa5avjiu6Eunkt50";
+String apiKeyValue = "Your-API-Key";
 String deviceID = "funf5";
 String location = "Titik 5";
 
