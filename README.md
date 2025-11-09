@@ -3,8 +3,6 @@
 This project uses **five ESP32 modules**, each equipped with a **built-in 18650 battery slot** for efficiency in both design time and cost.
 Each ESP32 is programmed to detect Wi-Fi network quality by scanning all available Access Points (APs) within range. The system identifies each AP using its **MAC Address**, allowing differentiation between multiple APs once the data is uploaded to the server.
 
-To calculate **Wi-Fi coverage area (signal coverage)**, an additional function is implemented in the ESP32 firmware based on the formula described in the *Theory* section of the report.
-
 
 ## Database Configuration
 
