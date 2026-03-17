@@ -63,3 +63,6 @@ Frontend (index.php / home.php) → PHP (data.php) → Chart.js visualization
 ↓
 Python Flask (app.py + heatmap_generator.py) → Heatmap generation
 ```
+
+### One of Line Chart Visualizations
+<img width="853" height="620" alt="image" src="https://github.com/user-attachments/assets/952ca16d-237f-458a-9fae-4f4840e4feb0" />
