@@ -155,15 +155,6 @@
                             });
                         </script>
                     </div>
-
-                    <div class="chartFooter">
-                        <div class="note">
-                            <strong>Catatan Fluktuasi:</strong><br>
-                            🔺: Sinyal meningkat > 2 dBm<br>
-                            🔻: Sinyal menurun > 2 dBm<br>
-                            ➖: Sinyal relatif stabil (±2 dBm)<br>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
