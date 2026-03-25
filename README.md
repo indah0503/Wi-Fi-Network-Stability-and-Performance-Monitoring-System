@@ -4,14 +4,35 @@ This project uses **five ESP32 modules**, each equipped with a **built-in 18650 
 Each ESP32 is programmed to detect Wi-Fi network quality by scanning all available Access Points (APs) within range. The system identifies each AP using its **MAC Address**, allowing differentiation between multiple APs once the data is uploaded to the server.
 
 
+## Hardware Layer
+
+| Component       | Specification                                                       |
+| --------------- | ------------------------------------------------------------------- |
+| Mikrocontroller | ESP32-WROOM-32                                                      |
+| Power           | Slot 18650 Li-ion + charging circuit                                |
+| Total Unit      | 5 unit                                                              |
+| Device ID       | eines1, zwei2, drei3, vier4, funf5                                  |
+| Function        | Scan Wi-Fi AP di sekitar dan kirim data ke server melalui HTTP POST |
+
+
 ## Database Configuration
 
 A **MySQL database** is created with **five tables**, each corresponding to one ESP32 device.
 Each table includes the following columns:
 
-```
-id, device_id, location, strength, distance, channel, channelLoad, interference, mac_address, time
-```
+| Column       | Data Type                      | Note                                   |
+| ------------ | ------------------------------ | -------------------------------------- |
+| id           | INT AUTO_INCREMENT PRIMARY KEY | Unique ID record                       |
+| device_id    | VARCHAR(10)                    | Device ID ESP32                        |
+| location     | VARCHAR(50)                    | Physical Location ESP32                |
+| strength     | INT                            | Signal strength (dBm)                  |
+| distance     | FLOAT                          | Estimation distance to AP (meter)      |
+| channel      | INT                            | Channel Wi-Fi                          |
+| channelLoad  | INT                            | Channel Load                           |
+| interference | FLOAT                          | Interference (dBm)                     |
+| mac_address  | VARCHAR(17)                    | MAC Address AP                         |
+| time         | TIMESTAMP                      | Time scan (CURRENT_TIMESTAMP)          |
+
 
 These fields store structured Wi-Fi signal data sent by each ESP32.
 
