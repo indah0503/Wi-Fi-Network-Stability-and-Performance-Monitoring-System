@@ -39,6 +39,47 @@ These fields store structured Wi-Fi signal data sent by each ESP32.
 
 ## Data Transmission Workflow
 
+### Endpoint
+
+| Endpoint   | Method | Function                               |
+| ---------- | ------ | -------------------------------------- |
+| submit.php | POST   | Receives ESP32 data and saves to MySQL |
+| data.php   | GET    | Fetches data for frontend Chart.js     |
+
+### Example HTTP POST Payload (JSON)
+
+```
+{
+  "api_key": "YOUR_API_KEY_HERE",
+  "device_id": "eines1",
+  "location": "Server Room",
+  "scans": [
+    {
+      "mac_address": "AA:BB:CC:DD:EE:FF",
+      "strength": -55,
+      "distance": 5.2,
+      "channel": 6,
+      "channelLoad": 30,
+      "interference": 0.2
+    },
+    {
+      "mac_address": "11:22:33:44:55:66",
+      "strength": -70,
+      "distance": 12.5,
+      "channel": 11,
+      "channelLoad": 10,
+      "interference": 0.1
+    }
+  ]
+}
+```
+
+### Flow
+
+```
+ESP32 → HTTP POST → Nginx (submit.php) → API Key Validation → Save to MySQL
+```
+
 Data transmission from ESP32 to MySQL is handled using a **PHP backend** (`submit.php`) running on an **Nginx web server**.
 
 1. **Nginx** is configured as the main web server and listens on **HTTP port 80**.
