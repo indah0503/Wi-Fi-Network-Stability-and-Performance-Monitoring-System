@@ -116,7 +116,7 @@ The heatmap generation system uses two Python scripts:
 * `app.py` – executes and serves the generated heatmap to the web interface
 
 
-### Summary of System Flow
+## Summary of System Flow
 
 ```
 ESP32 → HTTP POST → Nginx (PHP: submit.php) → MySQL
