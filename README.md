@@ -1,7 +1,32 @@
 ## System Overview
-
+Designed and implemented an end-to-end IoT-based data system to monitor Wi-Fi network quality using multiple ESP32 devices, covering data ingestion, storage, processing, and visualization.
 This project uses **five ESP32 modules**, each equipped with a **built-in 18650 battery slot** for efficiency in both design time and cost.
 Each ESP32 is programmed to detect Wi-Fi network quality by scanning all available Access Points (APs) within range. The system identifies each AP using its **MAC Address**, allowing differentiation between multiple APs once the data is uploaded to the server.
+
+
+## Key Contributions
+* Built a real-time data ingestion pipeline where multiple ESP32 devices transmit Wi-Fi scan data via HTTP POST to a PHP-based backend running on Nginx.
+* Developed backend APIs (submit.php, data.php) to handle secure data ingestion, validation, and retrieval using API key authentication.
+* Designed and implemented a relational database in MySQL to store structured Wi-Fi signal data, including signal strength, interference, and access point identification via MAC address.
+* Created interactive dashboards using HTML, CSS, JavaScript, and Chart.js to visualize network performance trends.
+Integrated Python (Flask) for generating heatmaps based on spatial Wi-Fi data, enabling intuitive analysis of signal coverage.
+
+
+## Data Modeling & System Design Insights
+* Implemented an initial schema using device-specific tables to simplify early-stage data ingestion and isolate data streams per device.
+* Identified scalability and maintainability limitations in this approach as data volume increased.
+* Proposed an optimized relational data model by consolidating data into a unified fact table structure with device identifiers, improving query efficiency and reducing redundancy.
+* Designed entity relationships between devices, access points, and scan records to support scalable data processing and analytical queries.
+* Applied data normalization principles and considered indexing strategies for performance optimization in real-time data retrieval.
+
+
+## Tech Stack
+Programming: Python, PHP, SQL
+Database: MySQL
+Backend: Nginx, REST API
+Data Processing: ETL, Data Validation
+Visualization: Chart.js, Flask (Heatmap Generation)
+Hardware: ESP32 (IoT)
 
 
 ## Hardware Layer
@@ -129,5 +154,6 @@ Python Flask (app.py + heatmap_generator.py) → Heatmap generation
 ### One of Line Chart Visualizations
 <img width="853" height="620" alt="image" src="https://github.com/user-attachments/assets/952ca16d-237f-458a-9fae-4f4840e4feb0" />
 
-# Note Improvement:
+
+## Note Improvement
 However, I identified scalability limitations in this approach and proposed a redesigned data model using a unified fact table with device identifiers to improve maintainability and query performance.
