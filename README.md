@@ -12,14 +12,6 @@ Each ESP32 is programmed to detect Wi-Fi network quality by scanning all availab
 Integrated Python (Flask) for generating heatmaps based on spatial Wi-Fi data, enabling intuitive analysis of signal coverage.
 
 
-## Data Modeling & System Design Insights
-* Implemented an initial schema using device-specific tables to simplify early-stage data ingestion and isolate data streams per device.
-* Identified scalability and maintainability limitations in this approach as data volume increased.
-* Proposed an optimized relational data model by consolidating data into a unified fact table structure with device identifiers, improving query efficiency and reducing redundancy.
-* Designed entity relationships between devices, access points, and scan records to support scalable data processing and analytical queries.
-* Applied data normalization principles and considered indexing strategies for performance optimization in real-time data retrieval.
-
-
 ## Tech Stack
 * Programming: Python, PHP, SQL
 * Database: MySQL
@@ -157,3 +149,10 @@ Python Flask (app.py + heatmap_generator.py) → Heatmap generation
 
 ## Note Improvement
 However, I identified scalability limitations in this approach and proposed a redesigned data model using a unified fact table with device identifiers to improve maintainability and query performance.
+
+### Data Modeling & System Design Insights
+* Implemented an initial schema using device-specific tables to simplify early-stage data ingestion and isolate data streams per device.
+* Identified scalability and maintainability limitations in this approach as data volume increased.
+* Proposed an optimized relational data model by consolidating data into a unified fact table structure with device identifiers, improving query efficiency and reducing redundancy.
+* Designed entity relationships between devices, access points, and scan records to support scalable data processing and analytical queries.
+* Applied data normalization principles and considered indexing strategies for performance optimization in real-time data retrieval.
