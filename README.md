@@ -36,21 +36,6 @@ Each table includes the following columns:
 
 These fields store structured Wi-Fi signal data sent by each ESP32.
 
-### Entity and Relational Structure
-+----------------+        +----------------+        +----------------------+
-|    devices     |        | access_points  |        |      wifi_scans      |
-+----------------+        +----------------+        +----------------------+
-| device_id (PK) |◄───────|                |        | id (PK)              |
-| location       |        | mac_address(PK)|───────►| device_id (FK)       |
-+----------------+        +----------------+        | mac_address (FK)     |
-                                                    | strength             |
-                                                    | distance             |
-                                                    | channel              |
-                                                    | channelLoad          |
-                                                    | interference         |
-                                                    | time (FK)            |
-                                                    +----------------------+
-
 
 ## Data Transmission Workflow
 
@@ -143,3 +128,6 @@ Python Flask (app.py + heatmap_generator.py) → Heatmap generation
 
 ### One of Line Chart Visualizations
 <img width="853" height="620" alt="image" src="https://github.com/user-attachments/assets/952ca16d-237f-458a-9fae-4f4840e4feb0" />
+
+# Note Improvement:
+However, I identified scalability limitations in this approach and proposed a redesigned data model using a unified fact table with device identifiers to improve maintainability and query performance.
