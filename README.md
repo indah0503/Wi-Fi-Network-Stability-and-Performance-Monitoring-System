@@ -36,6 +36,21 @@ Each table includes the following columns:
 
 These fields store structured Wi-Fi signal data sent by each ESP32.
 
+### Entity and Relational Structure
++----------------+        +----------------+        +----------------------+
+|    devices     |        | access_points  |        |      wifi_scans      |
++----------------+        +----------------+        +----------------------+
+| device_id (PK) |◄───────|                |        | id (PK)              |
+| location       |        | mac_address(PK)|───────►| device_id (FK)       |
++----------------+        +----------------+        | mac_address (FK)     |
+                                                    | strength             |
+                                                    | distance             |
+                                                    | channel              |
+                                                    | channelLoad          |
+                                                    | interference         |
+                                                    | time (FK)            |
+                                                    +----------------------+
+
 
 ## Data Transmission Workflow
 
