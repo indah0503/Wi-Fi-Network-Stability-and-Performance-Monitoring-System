@@ -156,3 +156,5 @@ However, I identified scalability limitations in this approach and proposed a re
 * Proposed an optimized relational data model by consolidating data into a unified fact table structure with device identifiers, improving query efficiency and reducing redundancy.
 * Designed entity relationships between devices, access points, and scan records to support scalable data processing and analytical queries.
 * Applied data normalization principles and considered indexing strategies for performance optimization in real-time data retrieval.
+
+<img width="712" height="302" alt="ERD PA" src="https://github.com/user-attachments/assets/bd7b4341-eac8-4eb3-a911-14a0bc3087d9" />
