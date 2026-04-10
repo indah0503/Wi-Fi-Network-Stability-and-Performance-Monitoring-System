@@ -21,12 +21,12 @@ Integrated Python (Flask) for generating heatmaps based on spatial Wi-Fi data, e
 
 
 ## Tech Stack
-Programming: Python, PHP, SQL
-Database: MySQL
-Backend: Nginx, REST API
-Data Processing: ETL, Data Validation
-Visualization: Chart.js, Flask (Heatmap Generation)
-Hardware: ESP32 (IoT)
+* Programming: Python, PHP, SQL
+* Database: MySQL
+* Backend: Nginx, REST API
+* Data Processing: ETL, Data Validation
+* Visualization: Chart.js, Flask (Heatmap Generation)
+* Hardware: ESP32 (IoT)
 
 
 ## Hardware Layer
