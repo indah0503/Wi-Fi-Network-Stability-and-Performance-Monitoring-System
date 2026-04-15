@@ -158,5 +158,3 @@ composer install
 * Gunakan REST API format JSON (bukan embed `<script>`)
 * Pisahkan logic dan view (MVC pattern)
 * Tambahkan rate limiting untuk endpoint
-
----
