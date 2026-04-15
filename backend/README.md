@@ -9,7 +9,6 @@ Backend ini berfungsi untuk:
 * Mengambil data sinyal terbaru dan terbaik
 * Menyediakan data untuk visualisasi (chart & dashboard)
 
----
 
 ## ⚙️ Teknologi
 
