@@ -10,7 +10,6 @@ Frontend ini merupakan dashboard web untuk:
 
 Frontend terhubung langsung dengan backend PHP untuk mengambil data.
 
----
 
 ## ⚙️ Teknologi
 
@@ -21,7 +20,6 @@ Frontend terhubung langsung dengan backend PHP untuk mengambil data.
 * Chart.js (visualisasi grafik)
 * GSAP & ScrollReveal (animasi)
 
----
 
 ## 📂 Struktur File
 
