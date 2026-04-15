@@ -17,7 +17,6 @@ Backend ini berfungsi untuk:
 * MySQL
 * Composer (vlucas/phpdotenv)
 
----
 
 ## 🔐 Environment Configuration
 
@@ -31,7 +30,6 @@ DB_PASS=
 DB_NAME=your_database
 ```
 
----
 
 ## 📂 File Structure
 
@@ -44,7 +42,6 @@ DB_NAME=your_database
 * `data_new.php`
   Mengambil data terbaru dari semua device dan menentukan sinyal terbaik
 
----
 
 ## 🔌 API Endpoint
 
@@ -73,7 +70,6 @@ DB_NAME=your_database
 * 403 → API key salah
 * 400 → data tidak valid
 
----
 
 ### 2. Get Best Signal Data
 
@@ -97,7 +93,6 @@ DB_NAME=your_database
 * -90 s/d -85 → Nyaris Hilang
 * ≤ -100 → Tidak Ada Sinyal
 
----
 
 ## 📊 Data Processing
 
@@ -119,7 +114,6 @@ Backend juga menyiapkan:
 * Data untuk line chart berdasarkan MAC address
 * Rentang waktu: 2 jam terakhir
 
----
 
 ## 🗄️ Database Structure (Contoh)
 
@@ -140,7 +134,6 @@ CREATE TABLE data_esp32_1 (
 
 (Struktur sama untuk tabel lain)
 
----
 
 ## 🚀 Cara Menjalankan
 
@@ -159,18 +152,8 @@ composer install
 * Submit data → `/backend/submit.php`
 * Ambil data → `/backend/data_new.php`
 
----
 
-## ⚠️ Catatan Penting
-
-* Gunakan API Key untuk keamanan
-* Hindari hardcode kredensial database
-* Gunakan prepared statement (sudah diterapkan di `submit.php`)
-* Perlu sanitasi tambahan untuk query di `data_new.php`
-
----
-
-## 🔧 Improvement (Disarankan)
+## 🔧 Improvement
 
 * Gabungkan tabel ESP32 jadi satu tabel dengan `device_id`
 * Gunakan REST API format JSON (bukan embed `<script>`)
